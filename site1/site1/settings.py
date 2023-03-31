@@ -72,9 +72,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'sl'
+LANGUAGE_CODE = 'en'
 
-TIME_ZONE = 'Europe/Budapest'
+TIME_ZONE = 'Europe/Ljubljana'
 
 USE_I18N = True
 
@@ -183,12 +183,20 @@ INSTALLED_APPS = [
 
 LANGUAGES = (
     ## Customize this
+    ('en', gettext('en')),
     ('sl', gettext('sl')),
 )
 
 CMS_LANGUAGES = {
     ## Customize this
     1: [
+        {
+            'code': 'en',
+            'name': gettext('en'),
+            'redirect_on_fallback': True,
+            'public': True,
+            'hide_untranslated': False,
+        },
         {
             'code': 'sl',
             'name': gettext('sl'),
@@ -207,8 +215,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
-    ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
