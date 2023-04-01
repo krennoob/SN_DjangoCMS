@@ -2,13 +2,21 @@
 
 {% for child in children %}
 
-    <li class="nav-item">
-        <a class="nav-link" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
-        {% if child.children %}
-            <ul class="sub_menu">
-                {% show_menu from_level to_level extra_inactive extra_active template '' '' child %}
-            </ul>
-        {% endif %}
-    </li>
+    {% if child.children %}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ child.get_menu_title }}</a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    {% for kid in child.get_descendants %}
+                        <li><a class="dropdown-item" href="{{ kid.attr.redirect_url|default:kid.get_absolute_url }}">{{ kid.get_menu_title }}</a></li>
+                    {% endfor %}
+                </ul>
+        </li>
+    {% endif %}
+
+    {% if not child.children %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+        </li>
+    {% endif %}
 
 {% endfor %}
