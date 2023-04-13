@@ -58,7 +58,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-          {% show_menu 0 100 100 100 "partials/navigation.html" %}
+            {% show_menu 0 100 100 100 "partials/navigation.html" %}
           </ul>
         </div>
       </nav>
@@ -76,11 +76,10 @@
     <div class="container">
       <div class="footer_location_text">
         <ul>
-          <li><img src="{% static "images/map-icon.png" %}"><span class="padding_left_10"><a href="#">Loram Ipusm hosting
-                web</a></span></li>
-          <li><img src="{% static "images/call-icon.png" %}"><span class="padding_left_10"><a href="#">Call : +7586656566</a></span>
+          <li><img src="{% static "images/map-icon.png" %}"><span class="padding_left_10">{% static_placeholder "location_footer" %}</span></li>
+          <li><img src="{% static "images/call-icon.png" %}"><span class="padding_left_10">{% static_placeholder "phone_number_footer" %}</span>
           </li>
-          <li><img src="{% static "images/mail-icon.png" %}"><span class="padding_left_10"><a href="#">demo@gmail.com</a></span></li>
+          <li><img src="{% static "images/mail-icon.png" %}"><span class="padding_left_10"><span class="padding_left_10">{% static_placeholder "email_footer" %}</span></li>
         </ul>
       </div>
       <div class="row">
