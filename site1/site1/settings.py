@@ -215,6 +215,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('home.html', 'home'),
+    ('about_us.html', 'about us'),
 
 )
 
