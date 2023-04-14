@@ -2,7 +2,7 @@ asgiref==3.6.0
 certifi==2022.12.7
 cssselect2==0.7.0
 distlib==0.3.6
-dj-database-url==1.2.0
+dj-database-url
 Django==3.1.14
 django-classy-tags==3.0.1
 django-cms==3.8.0
