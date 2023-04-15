@@ -327,6 +327,22 @@ button {
     margin: 0px;
     padding-top: 30px;
 }
+.banner_text_products {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #191616;
+    margin: 0px;
+    padding-top: 10px;
+}
+.banner_text_products_li {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #191616;
+    margin: 0px;
+    padding-top: 0px;
+}
 .banner_text {
     width: 100%;
     float: left;
