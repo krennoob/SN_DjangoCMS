@@ -335,13 +335,23 @@ button {
     margin: 0px;
     padding-top: 10px;
 }
-.banner_text_products_li {
+.banner_text_products_li_1 {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #191616;
+    margin: 0px;
+    padding-top: 10px;
+    list-style-type: disc;
+}
+.banner_text_products_li_2 {
     width: 100%;
     float: left;
     font-size: 16px;
     color: #191616;
     margin: 0px;
     padding-top: 0px;
+    list-style-type: disc;
 }
 .banner_text_about_us_1 {
     width: 100%;
