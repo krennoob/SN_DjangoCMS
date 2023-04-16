@@ -217,6 +217,7 @@ CMS_TEMPLATES = (
     ('home.html', 'home'),
     ('about_us.html', 'about us'),
     ('products.html', 'products'),
+    ('contact.html', 'contact'),
 
 )
 
